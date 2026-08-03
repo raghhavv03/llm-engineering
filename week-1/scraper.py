@@ -11,7 +11,7 @@ headers = {
 def fetch_website_contents(url):
     """
     Return the title and contents of the website at the given url;
-    truncate to 2,000 characters as a sensible limit
+    truncate to 2,000 characters as a sensible limit.
     """
     response = requests.get(url, headers=headers)
     soup = BeautifulSoup(response.content, "html.parser")
@@ -27,7 +27,7 @@ def fetch_website_contents(url):
 
 def fetch_website_links(url):
     """
-    Return the links on the webiste at the given url
+    Return the links on the website at the given url.
     I realize this is inefficient as we're parsing twice! This is to keep the code in the lab simple.
     Feel free to use a class and optimize it!
     """
